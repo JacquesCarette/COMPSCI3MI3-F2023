@@ -1,4 +1,4 @@
-![[Pasted image 20230907144436.png]]
+![[LanguageGraphWeek1.png]]
 # Lecture 1
 - arrows between languages signify that the language the arrow begins at influenced the langauge it points to
 	- there is no weighting, meaning some languages with several arrows pointing to it may be highly influenced by one language, and less another (for example, Ruby is highly influenced by Python and less so Eiffel)
