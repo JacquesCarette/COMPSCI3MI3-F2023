@@ -133,3 +133,6 @@
 - influenced other languages because of its regular expressions
 - Has patterns as a first-class data type
 - [Wikipedia Page](https://en.wikipedia.org/wiki/SNOBOL)
+
+# Full Graph
+![Full Graph](https://rigaux.org/language-study/diagram.png)
