@@ -15,7 +15,9 @@
 - soon after fortran came lisp
 	- more for computing abstract or symbolic stuff
 	- used for "oldies AI" (very basic)
-	- dynamic scope for if statements (fortran had static)
+	- dynamic scope for variables, meaning the most recent value assigned to a variable during the program's execution is its current value (fortran had static)
+ 	- [Lexical and Dynamic Scope](https://prl.khoury.northeastern.edu/blog/2019/09/05/lexical-and-dynamic-scope/)
+  	- [More on scope](https://en.wikipedia.org/wiki/Scope_(computer_science))
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Lisp)
 - [Lisp website](https://lisp-lang.org/)
 ### COBOL
@@ -37,7 +39,8 @@
 - [Wikipedia Page](https://en.wikipedia.org/wiki/PL/I)
 - [PL/I IBM documentation](https://www.ibm.com/docs/en/zos-basic-skills?topic=zos-pli)
 ### Smalltalk
-- Used a lot of OOP
+- First truly OO langauge
+- Most OO ideas (not already in SImula 67) came from here
 - makes "everything else seem like half hearted OO"
 - 5 + 3 sends message "+" to obj 5 w/ arg 3
 	- 5 has methods and reacts to the message "+", result is object 8
@@ -53,13 +56,13 @@
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Prolog)
 # Lecture 2
 
-# ML
+### ML
 - added abstract data types
 - The opposite of C in that C lets u see all the gritty details about a type, and this does the opposite
 - Cant lie to compiler- it know the types
 - (supposedly) enforces more debugging in present to save hassle/debugging down the line
 - [Wikipedia Page](https://en.wikipedia.org/wiki/ML_(programming_language))
-# Ada 83
+### Ada 83
 - committee made language
 - made for US defense for standardized defense stuff
 - has "PL1 syndrome", too much stuff mishmashed together
@@ -68,68 +71,70 @@
 	- uses contracts instead of tight data types
 - was good for a time as had high insurance (i think)
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Ada_(programming_language))
-# Eiffel
+### Eiffel
 - well designed, perfected contracts 
 - added strong concurrency
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Eiffel_(programming_language))
-# Ruby
+### Ruby
 - not strong connection to eiffel- mainly from python
 - "python redone but fixing Pythons mistakes"
 	- uses Python paradigm
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Ruby_(programming_language))
 - [Ruby website](https://www.ruby-lang.org/en/)
-# Python
+### Python
 - no types, layout sensitive syntax
 - didn't bring any new ideas, very standard language
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Python_(programming_language))
-# rust
+### rust
 - generally good language
 - slightly ruined by higherup politics
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Rust_(programming_language)
 - [Rust Controversy](https://www.looper.com/1209567/the-entire-rust-shooting-controversy-explained/)
 - [Interesting Reddit discussion on the Rust controversy](https://www.reddit.com/r/rust/comments/12lb0am/can_someone_explain_to_me_whats_happening_with/)
 - [Rust guide book (free)](https://doc.rust-lang.org/stable/book/)
-# D
+### D
 - An improved version of C
 - [Wikipedia Page](https://en.wikipedia.org/wiki/D_(programming_language)
 - [D language Website](https://dlang.org/)
-# Forth
+### Forth
 - influenced PDF (portable document format)
-- old but still used today
+- Mostly used for imbeded software
+- old but still in use today
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Forth_(programming_language))
 - [More info](https://www.forth.com/forth/)
-# postscript
+### postscript
 - binary of pdf has postscript!
 - stack based, dictionary is principle data structure
 - [Wikipedia Page](https://en.wikipedia.org/wiki/PostScript)
-# SEQUEL
+### SEQUEL
 - Described as "not that interesting"
 - The newer version, SQL, is a turing complete language. This may not be this a good thing because since the language is Turing complete, there is no way to calculate how much time it will take to execute a query, whereas you could easily compute and optimize queries in the previous versions.
 - The newer version, SQL, is turing complete
 	- not necessarily good as you can no longer calculate how long it takes to execute a query
 	- It is a reason why not many people use SEQUEL instead
 - [Wikipedia Page](https://en.wikipedia.org/wiki/SQL)
-# SH
+### SH
 - SH stands for shell
 	- despite common belief it is a full programming language! 
 - Microsoft powershell does NOT look like sh, it was a complete redesign
 - [Wikipedia Page](https://en.wikipedia.org/wiki/Shell_script)
-# OS2
+### OS2 (not testable material, fun info)
+- An operating system
 - Very dead, was made by a microsoft and IBM collab
 - Series of computer operating systems
 - [Wikipedia Page](https://en.wikipedia.org/wiki/OS/2)
-# APL
+### APL
 - Stands for A Programming Language
 - Primary data structure is arrays 
 - Strange syntax
 - [Wikipedia Page](https://en.wikipedia.org/wiki/APL_(programming_language)
 - [Try APL yourself here](https://tryapl.org/)
-# SaC
+### SaC
 - descendant of APL, stands for Single assignment C
 - Purely functional
 - [Wikipedia Page](https://en.wikipedia.org/wiki/SAC_programming_language)
 - [SaC Website](https://www.sac-home.org/index)
-# Snowbol
+### Snobol
 - influenced other languages because of its regular expressions
 - Has patterns as a first-class data type
 - [Wikipedia Page](https://en.wikipedia.org/wiki/SNOBOL)
