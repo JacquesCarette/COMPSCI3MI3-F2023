@@ -30,8 +30,9 @@
 ### Algol 60
 - influenced many languages, designed by a committee
 - first language with a standard
-- [Wikipedia Page](https://en.wikipedia.org/wiki/ALGOL_60)
-- [Original Website](https://algol60.org/)
+- [Wikipedia Page Algol](https://en.wikipedia.org/wiki/ALGOL)
+- [Wikipedia Page Algol 60](https://en.wikipedia.org/wiki/ALGOL_60)
+- [Algol 60 Website](https://algol60.org/)
 ### PL/I ("PL one")
 - many features, but they weren't very thought through
 - VERY BAD compile efficiency
