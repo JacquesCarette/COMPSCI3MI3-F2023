@@ -5,6 +5,7 @@
 -- - make life easier with types
 
 {-# OPTIONS_GHC -Wall #-}
+{-# LANGUAGE GADTs #-}
 module Sept14 where
 
 -- Let's start from this typed language
@@ -13,10 +14,10 @@ data Expr a where
   Add :: Expr Integer -> Expr Integer -> Expr Integer
   Mul :: Expr Integer -> Expr Integer -> Expr Integer
   Minus :: Expr Integer -> Expr Integer
-  B :: Expr Bool
+  B :: Bool -> Expr Bool
   Or :: Expr Bool -> Expr Bool -> Expr Bool
   Implies :: Expr Bool -> Expr Bool -> Expr Bool
-  Not :: Expr Bool -> Expr Bool -> Expr Bool
+  Not :: Expr Bool -> Expr Bool
   IF :: Expr Bool -> Expr a -> Expr a -> Expr a
 -- can't derive Show anymore!
 
