@@ -1,0 +1,33 @@
+cabal-version:      3.0
+name:               a1
+version:            0.1.0.0
+license:            NONE
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+library
+  hs-source-dirs:
+      src
+  exposed-modules:
+    -- If you want to add more files, add them here!
+    A1.Eval
+  build-depends:
+    base ^>=4.17.1.0
+  default-language:
+    GHC2021
+
+test-suite a1-test
+  type:
+    exitcode-stdio-1.0
+  hs-source-dirs:
+    test
+  main-is:
+    Main.hs
+  build-depends:
+    a1,
+    base ^>=4.17.1.0,
+    HUnit ^>=1.6
+  default-language:
+    GHC2021
