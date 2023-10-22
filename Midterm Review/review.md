@@ -100,28 +100,24 @@ Evaluate arguments to function calls before evaluating the function call.
 Stop when the outermost term is a lambda. This is the evaluation strategy
 most languages adopt.
 
-$$
-\begin{align*}
-  (\lambda x. \lambda y. x x y) ((\lambda x. x) a) b \\
-  (\lambda x. \lambda y. x x y) a b \\
-  (\lambda y. a a y) b
-  a a b
-\end{align*}
-$$
+```
+(λ x. λ y. x x y) ((λ x. x) a) b
+(λ x. λ y. x x y) a b
+(λ y. a a y) b
+a a b
+```
 
 ### Call-By-Name
 Evaluate function calls without evaluating arguments.
 Stop when the outermost term is a lambda.
 
-$$
-\begin{align*}
-  (\lambda x. \lambda y. x x y) ((\lambda x. x) a) b \\
-  (\lambda y. ((\lambda x. x) a) ((\lambda x. x) a) y) b
-  ((\lambda x. x) a) ((\lambda x. x) a) b
-  a ((\lambda x. x) a) b
-  a a b
-\end{align*}
-$$
+```
+(λ x. λ y. x x y) ((λ x. x) a) b
+(λ y. ((λ x. x) a) ((λ x. x) a) y)  b
+((λ x. x) a) ((λ x. x) a) b
+a ((λ x. x) a) b
+a a b
+```
 
 ### Call-By-Need
 Note that Call-By-Name duplicated work: every time we used $x$ in the body, we
