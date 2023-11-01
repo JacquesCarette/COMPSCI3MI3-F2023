@@ -75,3 +75,17 @@ tsstep(iszero(X), iszero(Y), e_IsZero(T)) :- tsstep(X,Y,T).
 %% t-multi
 tmstep(X, X, [e_Val(X)]) :- value(X).
 tmstep(X, Y, [W | Ws]) :- tsstep(X, Z, W), tmstep(Z, Y, Ws).
+
+%% typing derivation
+typederiv(true_, bool, t_True).
+typederiv(false_, bool, t_False).
+typederiv(zero, nat, t_Zero).
+typederiv(suc(X), nat, t_Succ(T)) :- typederiv(X, nat, T).
+typederiv(pred(X), nat, t_Pred(T)) :- typederiv(X, nat, T).
+typederiv(iszero(X), bool, t_Iszero(T)) :- typederiv(X, nat, T).
+typederiv(if_then_else(X,Y,Z), T, t_If(XD, YD, ZD)) :-
+  typederiv(X,bool,XD), typederiv(Y, T, YD), typederiv(Z, T, ZD).
+
+%% can we trivially use Prolog as a theorem prover? 
+typedvalue(V, T) :- value(V), typederiv(V, T, _).
+progress(V, T) :- typederiv(V, T, _), value(V), sstep(V, Z).
