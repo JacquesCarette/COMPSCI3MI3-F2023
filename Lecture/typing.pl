@@ -18,8 +18,7 @@ nv(suc(X)) :- nv(X).
 
 value(true_).
 value(false_).
-value(zero).
-value(suc(X)) :- nv(X).
+value(X) :- nv(X).
 
 type(bool).
 type(nat).
@@ -69,7 +68,7 @@ tsstep(pred(zero), zero, e_PredZero).
 tsstep(pred(suc(X)), X, e_PredSucc) :- nv(X).
 tsstep(pred(X), pred(Y), e_Pred(T)) :- tsstep(X,Y,T).
 tsstep(iszero(zero), true_, e_IsZeroZero).
-tsstep(iszero(suc(X)), false_, e_IsZeroSucc) :- nv(X).
+tsstep(iszero(suc(X)), false_, e_IsZeroSucc(X)) :- nv(X).
 tsstep(iszero(X), iszero(Y), e_IsZero(T)) :- tsstep(X,Y,T).
 
 %% t-multi
@@ -88,4 +87,4 @@ typederiv(if_then_else(X,Y,Z), T, t_If(XD, YD, ZD)) :-
 
 %% can we trivially use Prolog as a theorem prover? 
 typedvalue(V, T) :- value(V), typederiv(V, T, _).
-progress(V, T) :- typederiv(V, T, _), value(V), sstep(V, Z).
+progress(V, T) :- typederiv(V, T, _), (value(V); sstep(V, _)).
