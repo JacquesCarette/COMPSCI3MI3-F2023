@@ -31,7 +31,7 @@ data ⊢_∶_ : Expr → Type → Set where
   T-Zero : ⊢ zero ∶ nat
   T-Succ : ∀{x} → ⊢ x ∶ nat → ⊢ suc x ∶ nat
   T-If : ∀ {cd th el} {t : Type} → ⊢ cd ∶ bool → ⊢ th ∶ t → ⊢ el ∶ t →
-    ⊢ if cd then th else th ∶ t
+    ⊢ if cd then th else el ∶ t
   T-Pred : ∀{x} → ⊢ x ∶ nat → ⊢ pred x ∶ nat
   T-IsZero : ∀{x} → ⊢ x ∶ nat → ⊢ iszero x ∶ bool
 
@@ -60,3 +60,10 @@ progress typed = {!!}
 -- preservation
 pres : ∀ {t t' T} → ⊢ t ∶ T → t ⟶ t' → ⊢ t' ∶ T
 pres typed step = {!!}
+
+-- canonical forms
+canBool : ∀ {v} → ⊢ v ∶ bool → Value v → v ≡ true ⊎ v ≡ false
+canBool typed val = {!!}
+
+canNat : ∀ {v} → ⊢ v ∶ nat → Value v → NV v
+canNat typed val = {!!}
