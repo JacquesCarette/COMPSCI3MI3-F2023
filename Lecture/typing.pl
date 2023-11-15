@@ -57,7 +57,7 @@ eval(if_then_else(X, _, Z), W) :- eval(X, false_), eval(Z, W).
 
 %% multi-step
 mstep(X, X) :- value(X).
-mstep(X, Y) :- sstep(X, Z), mstep(Y, Z).
+mstep(X, Y) :- sstep(X, Z), mstep(Z, Y).
 
 %% tracing single-step evaluator
 tsstep(if_then_else(true_, X, _), X, e_IfTrue).
