@@ -1,0 +1,40 @@
+Key points of the answers to the midterm:
+
+1. That a PL does not need to have 1D ASCII syntax to be a PL (as its
+programs are colour pictures)
+
+2. It is a means to define 'syntaxes' for languages. It was designed for
+the specification of Algol-60. Before this, the syntax of a language was
+"whatever the compiler accepted" a la Fortran-I.
+
+3. Imperative. C, Pascal, D are all great examples. Java, C#, Python
+  are acceptable examples
+
+4. 
+toto [] ys = ys
+toto (x : ys) zs = x : toto ys zs
+
+5. thing([a,b], N, [c,d])
+In this case, [a,b] is not a prefix of [c,d] so the relation is empty,
+so there is no N that can satisfy it.
+(Any example where 'prefix' is false will do)
+
+6. Yes (show derivation). No - there are no parens in this language
+
+7.
+Both terms are values, so CbN and CbV proceed in the same way.
+Substitution of the 2nd into the first produces the same term again, so
+that evaluation will never "change" anything and just keep going.
+
+8.
+ Mul (Add (Int 5) (Int 17)) (Int 6)
+
+9. 
+class Expr e where
+  int :: Integer -> e
+  add :: e -> e -> e
+  mul :: e -> e -> e
+
+where lower-case of methods matters
+
+
